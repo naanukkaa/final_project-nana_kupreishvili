@@ -1,0 +1,213 @@
+@import url("//cdn.web-fonts.ge/fonts/alk-life/css/alk-life.min.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: "ALK Life", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  display: flex;
+  justify-content: center;  /* ჰორიზონტალური ცენტრი */
+  align-items: center;      /* ვერტიკალური ცენტრი */
+  min-height: 100vh;        /* მთელი ეკრანის სიმაღლე */
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #f0f0f5;
+  font-family: "ALK Life", sans-serif;
+}
+
+
+.container {
+  max-width: 720px;
+  width: 100%;  /* რომ პატარა ეკრანებზეც არ გასცდეს */
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  color: #333;
+  padding: 30px 40px;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-family: "ALK Life", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+  letter-spacing: 1.1px;
+}
+
+a.button, button.button {
+  display: inline-block;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  font-size: 1.1rem;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.06em;
+  transition: all 0.3s ease;
+}
+
+a.button:hover, button.button:hover {
+  background: linear-gradient(45deg, #5466c9, #653d92);
+  box-shadow: 0 8px 25px rgba(84, 102, 201, 0.6);
+  transform: translateY(-3px);
+}
+
+a.button:active, button.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(84, 102, 201, 0.8);
+}
+
+p{
+  margin-top: 20px;
+  font-size: 20px;
+  color: #555;
+  text-align: center;
+  font-weight: 500;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  color: #764ba2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.back:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+.book-item {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 18px 25px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.25);
+}
+
+.book-item .info h2 {
+  font-family: "ALK Life", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.book-item .info p {
+  color: #666;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions a.edit {
+  background: #42b983;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 12px rgba(66, 185, 131, 0.4);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  user-select: none;
+}
+
+.actions a.edit:hover {
+  background: #369e6a;
+}
+
+.actions a.delete {
+  background: #e94e4e;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 12px rgba(233, 78, 78, 0.4);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  user-select: none;
+}
+
+.actions a.delete:hover {
+  background: #b33939;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.8px solid #ddd;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form input[type="number"]:focus,
+.form select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px #667eeaaa;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+    margin: 10px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .book-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .actions {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}

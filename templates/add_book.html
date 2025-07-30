@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>ახალი წიგნის დამატება</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>➕ ახალი წიგნის დამატება</h1>
+        <form method="POST" class="form">
+            <label>სათაური:<input type="text" name="title" required></label>
+            <label>ავტორი:<input type="text" name="author" required></label>
+            <label>შეფასება:<input type="number" name="rate" min="1" max="5" required></label>
+            <label>სტატუსი:
+                <select name="status">
+                    <option value="წაკითხული">წაკითხული</option>
+                    <option value="კითხვის პროცესში">კითხვის პროცესში</option>
+                    <option value="დაგეგმილი">დაგეგმილი</option>
+                </select>
+            </label>
+            <button type="submit" class="button">დამატება</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="back">⬅️ უკან</a>
+    </div>
+</body>
+</html>
