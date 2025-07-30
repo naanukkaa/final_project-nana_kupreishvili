@@ -93,6 +93,7 @@ p{
 }
 
 .book-list {
+  margin-top: 20px;
   list-style: none;
   padding: 0;
 }
@@ -126,6 +127,7 @@ p{
   font-weight: 500;
   font-size: 0.95rem;
   margin-bottom: 3px;
+  text-align: left;
 }
 
 .actions {
@@ -150,7 +152,7 @@ p{
 }
 
 .actions a.delete {
-  background: #e94e4e;
+  background: #ff7d7d;
   padding: 8px 14px;
   border-radius: 12px;
   font-weight: 600;
@@ -162,7 +164,7 @@ p{
 }
 
 .actions a.delete:hover {
-  background: #b33939;
+  background: #e94e4e;
 }
 
 .form label {
